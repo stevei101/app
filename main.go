@@ -1,5 +1,5 @@
 package main
-
+// This is a single-line comment
 import (
         "fmt"
         "net/http"
