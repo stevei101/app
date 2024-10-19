@@ -44,12 +44,6 @@ func main() {
 	fs := http.FileServer(http.Dir("./assets"))
 	http.Handle("/assets/", http.StripPrefix("/assets/", fs))
 
-	// Serve a robots.txt file
-	http.HandleFunc("/robots.txt", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "text/plain")
-		w.Write([]byte("User-agent: \nAllow:   /\nSitemap: https://inertsynergies.com/assets/sitemap.xml\n"))
-	})
-
 	// PORT environment variable is provided by Cloud Run.
 	port := os.Getenv("PORT")
 	if port == "" {
