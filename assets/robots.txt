@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://inertsynergies.com/sitemap.xml
+Sitemap: https://lornu.com/sitemap.xml
